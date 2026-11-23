@@ -1,6 +1,7 @@
 import { app } from "./app.js"
 import { createServer } from "http"
 import dotenv from "dotenv"
+import { initQueueWorker } from "./queues/webhook/worker.js";
 dotenv.config()
 
 const port = process.env.PORT as string || 3000
@@ -18,6 +19,7 @@ async function init() {
             console.log(`API Server is listening on port ${port}`)
         })
         
+        initQueueWorker()
 
     }catch(err){
         console.log(`Error occured while starting server, ${err}`)

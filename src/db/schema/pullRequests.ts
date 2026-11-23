@@ -62,7 +62,6 @@ export const pullRequests = pgTable(
 
         issuesContent: text('issues_content'),
         repo: text('repo_name').notNull(),
-        repoId: bigint("repo_id", {mode: "number",}).notNull(),
 
         githubCreatedAt: timestamp("github_created_at", {withTimezone: true,}).notNull(),
         githubUpdatedAt: timestamp("github_updated_at", {withTimezone: true,}).notNull(),
