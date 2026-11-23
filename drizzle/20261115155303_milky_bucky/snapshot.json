@@ -1,0 +1,408 @@
+{
+  "type": "diff",
+  "version": "9",
+  "dialect": "postgres",
+  "id": "8fe72257-ec1e-4806-a31a-c824eeac1ef6",
+  "prevIds": [
+    "ed4cc5f2-b16a-4d4f-a583-88380d67bf17"
+  ],
+  "footprints": [
+    {
+      "statementType": "drop_fk",
+      "statementTarget": [
+        "table",
+        "public",
+        "pull_requests"
+      ],
+      "writes": [
+        "s|fk|public.pull_requests.pull_requests_user_id_users_id_fkey",
+        "n|fk|public.pull_requests.pull_requests_user_id_users_id_fkey",
+        "e|fk|public.pull_requests.pull_requests_user_id_users_id_fkey",
+        "n|con|public.pull_requests.pull_requests_user_id_users_id_fkey"
+      ],
+      "reads": [
+        "n|tbl|public.pull_requests",
+        "n|sch|public",
+        "e|col|public.pull_requests.user_id"
+      ]
+    },
+    {
+      "statementType": "drop_index",
+      "statementTarget": [
+        "index",
+        "public",
+        "pull_requests",
+        "user_id_idx"
+      ],
+      "writes": [
+        "s|idx|public.user_id_idx",
+        "n|idx|public.user_id_idx",
+        "e|idx|public.user_id_idx",
+        "n|rel|public.user_id_idx"
+      ],
+      "reads": [
+        "n|tbl|public.pull_requests",
+        "n|sch|public",
+        "e|col|public.pull_requests.user_id"
+      ],
+      "sharedWrites": [
+        "e|uniqueness|public.pull_requests.user_id"
+      ]
+    },
+    {
+      "statementType": "add_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "pull_requests",
+        "github_installation_id"
+      ],
+      "writes": [
+        "s|col|public.pull_requests.github_installation_id",
+        "n|col|public.pull_requests.github_installation_id",
+        "e|col|public.pull_requests.github_installation_id"
+      ],
+      "reads": [
+        "n|tbl|public.pull_requests",
+        "n|sch|public"
+      ]
+    },
+    {
+      "statementType": "add_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "pull_requests",
+        "changed_file_content"
+      ],
+      "writes": [
+        "s|col|public.pull_requests.changed_file_content",
+        "n|col|public.pull_requests.changed_file_content",
+        "e|col|public.pull_requests.changed_file_content"
+      ],
+      "reads": [
+        "n|tbl|public.pull_requests",
+        "n|sch|public"
+      ]
+    },
+    {
+      "statementType": "add_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "pull_requests",
+        "closed_at"
+      ],
+      "writes": [
+        "s|col|public.pull_requests.closed_at",
+        "n|col|public.pull_requests.closed_at",
+        "e|col|public.pull_requests.closed_at"
+      ],
+      "reads": [
+        "n|tbl|public.pull_requests",
+        "n|sch|public"
+      ]
+    },
+    {
+      "statementType": "add_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "pull_requests",
+        "issues_url"
+      ],
+      "writes": [
+        "s|col|public.pull_requests.issues_url",
+        "n|col|public.pull_requests.issues_url",
+        "e|col|public.pull_requests.issues_url"
+      ],
+      "reads": [
+        "n|tbl|public.pull_requests",
+        "n|sch|public"
+      ]
+    },
+    {
+      "statementType": "add_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "pull_requests",
+        "repo_url"
+      ],
+      "writes": [
+        "s|col|public.pull_requests.repo_url",
+        "n|col|public.pull_requests.repo_url",
+        "e|col|public.pull_requests.repo_url"
+      ],
+      "reads": [
+        "n|tbl|public.pull_requests",
+        "n|sch|public"
+      ]
+    },
+    {
+      "statementType": "drop_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "pull_requests",
+        "user_id"
+      ],
+      "writes": [
+        "s|col|public.pull_requests.user_id",
+        "n|col|public.pull_requests.user_id",
+        "e|col|public.pull_requests.user_id"
+      ],
+      "reads": [
+        "n|tbl|public.pull_requests",
+        "n|sch|public"
+      ]
+    },
+    {
+      "statementType": "drop_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "pull_requests",
+        "author_github_id"
+      ],
+      "writes": [
+        "s|col|public.pull_requests.author_github_id",
+        "n|col|public.pull_requests.author_github_id",
+        "e|col|public.pull_requests.author_github_id"
+      ],
+      "reads": [
+        "n|tbl|public.pull_requests",
+        "n|sch|public"
+      ]
+    },
+    {
+      "statementType": "drop_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "pull_requests",
+        "github_diff_url"
+      ],
+      "writes": [
+        "s|col|public.pull_requests.github_diff_url",
+        "n|col|public.pull_requests.github_diff_url",
+        "e|col|public.pull_requests.github_diff_url"
+      ],
+      "reads": [
+        "n|tbl|public.pull_requests",
+        "n|sch|public"
+      ]
+    },
+    {
+      "statementType": "drop_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "pull_requests",
+        "github_patch_url"
+      ],
+      "writes": [
+        "s|col|public.pull_requests.github_patch_url",
+        "n|col|public.pull_requests.github_patch_url",
+        "e|col|public.pull_requests.github_patch_url"
+      ],
+      "reads": [
+        "n|tbl|public.pull_requests",
+        "n|sch|public"
+      ]
+    },
+    {
+      "statementType": "create_index",
+      "statementTarget": [
+        "index",
+        "public",
+        "pull_requests",
+        "github_app_installation_id_idx"
+      ],
+      "writes": [
+        "s|idx|public.github_app_installation_id_idx",
+        "n|idx|public.github_app_installation_id_idx",
+        "e|idx|public.github_app_installation_id_idx",
+        "n|rel|public.github_app_installation_id_idx"
+      ],
+      "reads": [
+        "n|tbl|public.pull_requests",
+        "n|sch|public",
+        "n|col|public.pull_requests.github_installation_id"
+      ]
+    },
+    {
+      "statementType": "create_fk",
+      "statementTarget": [
+        "table",
+        "public",
+        "pull_requests"
+      ],
+      "writes": [
+        "s|fk|public.pull_requests.pull_requests_20XFjokncFKj_fkey",
+        "n|fk|public.pull_requests.pull_requests_20XFjokncFKj_fkey",
+        "e|fk|public.pull_requests.pull_requests_20XFjokncFKj_fkey",
+        "n|con|public.pull_requests.pull_requests_20XFjokncFKj_fkey"
+      ],
+      "reads": [
+        "n|tbl|public.pull_requests",
+        "n|sch|public",
+        "n|tbl|public.github_installations",
+        "n|sch|public",
+        "n|col|public.pull_requests.github_installation_id",
+        "n|col|public.github_installations.id",
+        "e|uniqueness|public.github_installations.id"
+      ]
+    }
+  ],
+  "deltas": [
+    {
+      "op": "create",
+      "row": {
+        "schema": "public",
+        "table": "pull_requests",
+        "name": "github_installation_id",
+        "type": "uuid",
+        "typeSchema": null,
+        "notNull": true,
+        "dimensions": 0,
+        "default": null,
+        "generated": null,
+        "identity": null,
+        "entityType": "columns"
+      }
+    },
+    {
+      "op": "create",
+      "row": {
+        "schema": "public",
+        "table": "pull_requests",
+        "name": "changed_file_content",
+        "type": "text",
+        "typeSchema": null,
+        "notNull": false,
+        "dimensions": 0,
+        "default": null,
+        "generated": null,
+        "identity": null,
+        "entityType": "columns"
+      }
+    },
+    {
+      "op": "create",
+      "row": {
+        "schema": "public",
+        "table": "pull_requests",
+        "name": "closed_at",
+        "type": "timestamp with time zone",
+        "typeSchema": null,
+        "notNull": false,
+        "dimensions": 0,
+        "default": null,
+        "generated": null,
+        "identity": null,
+        "entityType": "columns"
+      }
+    },
+    {
+      "op": "create",
+      "row": {
+        "schema": "public",
+        "table": "pull_requests",
+        "name": "issues_url",
+        "type": "text",
+        "typeSchema": null,
+        "notNull": false,
+        "dimensions": 0,
+        "default": null,
+        "generated": null,
+        "identity": null,
+        "entityType": "columns"
+      }
+    },
+    {
+      "op": "create",
+      "row": {
+        "schema": "public",
+        "table": "pull_requests",
+        "name": "repo_url",
+        "type": "text",
+        "typeSchema": null,
+        "notNull": true,
+        "dimensions": 0,
+        "default": null,
+        "generated": null,
+        "identity": null,
+        "entityType": "columns"
+      }
+    },
+    {
+      "op": "create",
+      "row": {
+        "schema": "public",
+        "table": "pull_requests",
+        "name": "github_app_installation_id_idx",
+        "nameExplicit": true,
+        "columns": [
+          {
+            "value": "github_installation_id",
+            "isExpression": false,
+            "asc": true,
+            "nullsFirst": false,
+            "opclass": null
+          }
+        ],
+        "isUnique": true,
+        "where": null,
+        "with": "",
+        "method": "btree",
+        "concurrently": false,
+        "entityType": "indexes"
+      }
+    },
+    {
+      "op": "create",
+      "row": {
+        "schema": "public",
+        "table": "pull_requests",
+        "name": "pull_requests_20XFjokncFKj_fkey",
+        "nameExplicit": false,
+        "columns": [
+          "github_installation_id"
+        ],
+        "schemaTo": "public",
+        "tableTo": "github_installations",
+        "columnsTo": [
+          "id"
+        ],
+        "onUpdate": "NO ACTION",
+        "onDelete": "CASCADE",
+        "entityType": "fks"
+      }
+    },
+    {
+      "op": "drop",
+      "key": "columns\u0000[\"public\",\"pull_requests\",\"user_id\"]"
+    },
+    {
+      "op": "drop",
+      "key": "columns\u0000[\"public\",\"pull_requests\",\"author_github_id\"]"
+    },
+    {
+      "op": "drop",
+      "key": "columns\u0000[\"public\",\"pull_requests\",\"github_diff_url\"]"
+    },
+    {
+      "op": "drop",
+      "key": "columns\u0000[\"public\",\"pull_requests\",\"github_patch_url\"]"
+    },
+    {
+      "op": "drop",
+      "key": "indexes\u0000[\"public\",\"user_id_idx\"]"
+    },
+    {
+      "op": "drop",
+      "key": "fks\u0000[\"public\",\"pull_requests\",\"pull_requests_user_id_users_id_fkey\"]"
+    }
+  ]
+}
