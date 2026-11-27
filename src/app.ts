@@ -9,6 +9,7 @@ import { userRouter } from "./modules/user/user.routes.js"
 import { webhookRouter } from "./modules/webhook/webhook.route.js";
 import { installationRouter } from "./modules/github_installation/github_installation.routes.js"
 import { prRouter } from "./modules/pr/pr.routes.js";
+import { reviewRouter } from "./modules/review/review.routes.js";
 
 export const app:Express = express()
 
@@ -32,3 +33,4 @@ app.use("/api/v1/user",userRouter)
 app.use("/api/v1/webhook",webhookRouter)
 app.use("/api/v1/github-installation", installationRouter)
 app.use("/api/v1/pr", prRouter)
+app.use("/api/v1/review", reviewRouter)

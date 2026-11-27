@@ -67,3 +67,26 @@ export interface IGithubInstallation{
     repoSelection: string
     accountType: string
 }
+
+export interface IFileChange{
+    sha: string
+    filename: string
+    status: string
+    changes: number
+    patch: string
+    prev_filename: string
+}
+
+export interface IPullRequestData {
+    id: string
+    githubId: number
+    number: number
+    fileChanges: Array<IFileChange>
+    issues: string
+    headSha: string
+    baseSha: string
+    sourceBranch: string
+    targetBranch: string
+    title: string
+    description: string
+}
